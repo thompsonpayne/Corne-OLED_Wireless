@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    behaviors {
+behaviors {
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -19,7 +19,8 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp &kp>;
-            hold-trigger-key-positions = <19 20 21 22 23 38 39 40 41>;
+            /* This list includes ALL keys on the right hand (21-41) */
+            hold-trigger-key-positions = <21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41>;
             hold-trigger-on-release;
         };
 
@@ -31,11 +32,11 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp &kp>;
-            hold-trigger-key-positions = <12 13 14 15 16 36 37>;
+            /* This list includes ALL keys on the left hand (0-20) */
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20>;
             hold-trigger-on-release;
         };
     };
-
     keymap {
         compatible = "zmk,keymap";
 
